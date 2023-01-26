@@ -1,0 +1,7 @@
+<h2>Apply for the Job</h2>
+<form action="{% url "jobAPP:post_application" post.id %}" method="post" enctype="multipart/form-data">
+    {{ form.as_p }}
+    {% csrf_token %}
+    <p><input type="submit" value="Submit application"></p>
+    
+</form>
